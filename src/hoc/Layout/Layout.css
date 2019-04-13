@@ -1,0 +1,76 @@
+.Pimg1, .Pimg2, .Pimg3, .Pimg4 {
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.Pimg1 {
+    background-image: url('../../assets/images/luke-schobert-1002577-unsplash.jpg');
+    min-height: 100vh;
+    opacity: 1;
+}
+
+.Pimg2 {
+    background-image: url('../../assets/images/hunter-trahan-434540-unsplash.jpg');
+    min-height: 400px;
+}
+
+.Pimg3 {
+    background-image: url('../../assets/images/jonathan-farber-657014-unsplash.jpg');
+    min-height: 400px;
+}
+
+.Pimg4 {
+    background-image: url('../../assets/images/steven-bennett-1237252-unsplash.jpg');
+    background-size: contain;
+    opacity: 1;
+    min-height: 100vh;
+    background-position: right;
+}
+
+/* .Pimg5 {
+    background-image: url('../../assets/images/steven-bennett-1237252-unsplash.jpg');
+    background-size: contain;
+    opacity: 1;
+    min-height: 100vh;
+    background-position: left;
+} */
+
+.Section {
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.Ptext {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.Ptext .Border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.Ptext .Border.trans {
+    background-color: transparent;
+}
+
