@@ -10,6 +10,7 @@ const Product = (props) => (
             </div>
             <div className="Title">
                 <h2>{props.title}</h2>
+                <p>Detalji</p>
             </div>
         </div>
     </Wrap>

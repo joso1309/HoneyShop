@@ -5,12 +5,10 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import ProductElement from '../../components/ProductElement/ProductElement';
 import ProductDescription from '../../components/ProductDescription/ProductDescription';
+import getProducts from '../../services/getProducts'
 
 
 function TabContainer(props) {
-
-    description = null
-
     return (
         <Typography component="div" style={{ padding: 8 * 3 }}>
             {props.children}
@@ -18,14 +16,10 @@ function TabContainer(props) {
     );
 }
 
-let description = null
+let descriptionText = null
+let productTitle = null
 
-const productsDescription = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur, nulla sit amet viverra faucibus, nisl enim varius lectus, eget sagittis magna tortor quis lorem. Quisque quis tortor felis. Morbi interdum vestibulum arcu. Sed bibendum non ipsum a dictum. Curabitur eget sollicitudin quam, ut congue nisi. Sed eu lorem hendrerit, facilisis nibh a, viverra arcu. Proin vel ex ornare, tristique dui id, maximus urna.",
-    "hkhkhkhkhkhk",
-    "tralalalalal",
-    "tralalalalal",
-]
+const allProducts = getProducts()
 
 class ProductsSection extends Component {
     state = {
@@ -33,14 +27,19 @@ class ProductsSection extends Component {
         showDescription: false
     };
 
-    handleChange = (event, tabValue) => {
+    handleTabChange = (event, tabValue) => {
         this.setState({ tabValue });
     };
 
-    showDescriptionHandler = (id) => {
-        this.setState({ showDescription: true })
-        description = <ProductDescription text={productsDescription[id]}></ProductDescription>
-    }
+    handleDescriptionOpen = (text, title) => {
+        this.setState({ showDescription: true });
+        descriptionText = text
+        productTitle = title
+    };
+
+    handleDescriptionClose = () => {
+        this.setState({ showDescription: false });
+    };
 
     render() {
 
@@ -51,32 +50,33 @@ class ProductsSection extends Component {
                 <Tabs
                     className="Tabs"
                     value={this.state.tabValue}
-                    onChange={this.handleChange}
+                    onChange={this.handleTabChange}
                     centered
                 >
-                    <Tab label="Med" />
-                    <Tab label="Drugo" />
-                    <Tab label="Trece" />
+                    {allProducts.map(category => {
+                        return (
+                            <Tab label={category.categoryName} key={category.tabId} />
+                        )
+                    })}
                 </Tabs>
 
-                {this.state.tabValue === 0 && <TabContainer>
-                    <ProductElement key={0} title="Prvi" clicked={() => this.showDescriptionHandler(0)}></ProductElement>
-                    <ProductElement key={1} title="Drugi" clicked={() => this.showDescriptionHandler(1)}></ProductElement>
-                    {/* <ProductElement title="Drugi"></ProductElement>
-                    <ProductElement title="Prvi"></ProductElement>
-                    <ProductElement title="Drugi"></ProductElement> */}
-                </TabContainer>}
+                {allProducts.map(category => {
+                    return (
+                        this.state.tabValue === category.tabId && <TabContainer key={category.tabId}>
+                            {allProducts[category.tabId].products.map(product => {
+                                return (
+                                    <ProductElement
+                                        key={product.productId}
+                                        title={product.productTitle}
+                                        clicked={() => this.handleDescriptionOpen(product.productDescription, product.productTitle)} />
+                                )
+                            })}
 
-                {this.state.tabValue === 1 && <TabContainer>
-                    {/* <ProductElement title="Treci"></ProductElement>
-                    <ProductElement title="Treci"></ProductElement> */}
-                </TabContainer>}
+                        </TabContainer>
+                    )
+                })}
 
-                {this.state.tabValue === 2 && <TabContainer>
-                    {/* <ProductElement title="Prvi"></ProductElement> */}
-                </TabContainer>}
-
-                {description}
+                <ProductDescription title={productTitle} text={descriptionText} opened={this.state.showDescription} closeDescription={this.handleDescriptionClose}></ProductDescription>
             </section>
         )
     }

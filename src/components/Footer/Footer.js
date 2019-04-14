@@ -7,7 +7,8 @@ const Footer = () => (
         <div className="Pimg4">
         </div>
         <div className="Footer">
-            <h3>footer</h3>
+            <p className="FooterText">footer</p>
+            {/* <h3>footer</h3> */}
         </div>
     </Wrap>
 

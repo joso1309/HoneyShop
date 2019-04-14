@@ -1,8 +1,23 @@
 .Section {
-    padding: 50px 80px;
+    padding: 10px 30px 50px;
 }
 
 .section-dark {
     background-color: #282e34;
     color: #ddd;
+}
+
+.ProfilePicture {
+    background-position-x: 10%;
+    background-image: url('../../assets/images/pero2.jpg');
+    min-height: 40vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    
+}
+
+.ProfileText {
+    max-width: 300px;
+    margin: auto;
 }

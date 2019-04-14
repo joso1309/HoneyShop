@@ -11,10 +11,11 @@
     font-size: 12px;
     border-radius: 15px;
     color: #ddd;
+    outline:none;
 }
 
 .Product:hover,
-.active {
+.Product:active {
     background-color: rgba(201, 167, 18);
 }
 
@@ -27,5 +28,20 @@
 }
 
 .Title {
-    display: inline-block;
+    min-height: 50px;
+    font-size: 10px;
+    display: block;
+}
+
+#p {
+    color: rgba(201, 167, 18);
+}
+p.Title:hover {
+    color: #282e34;
+}
+
+@media (min-width: 500px) {
+    .Product:hover {
+        background-color: rgba(201, 167, 18);
+    }
 }

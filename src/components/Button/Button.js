@@ -2,7 +2,9 @@ import React from 'react'
 import './Button.css'
 
 const Button = () => (
-    <button className="btnDodaj" >Dodaj u košaricu</button>
+    <div>
+        <button className="btnDodaj" >Dodaj u košaricu</button>
+    </div>
 )
 
 export default Button
