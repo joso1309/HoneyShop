@@ -4,10 +4,12 @@ import Wrap from '../../hoc/Wrap/Wrap'
 
 const Product = (props) => (
     <Wrap>
-        <div className="Product">
-            <h2>{props.title}</h2>
-            <div className="Info">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum sapien quam.</p>
+        <div className="Product" onClick={props.clicked}>
+            <div>
+                <div className="Med1"></div>
+            </div>
+            <div className="Title">
+                <h2>{props.title}</h2>
             </div>
         </div>
     </Wrap>

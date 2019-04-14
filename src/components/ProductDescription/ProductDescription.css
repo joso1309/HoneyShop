@@ -1,0 +1,13 @@
+.ProductDescription {
+    display: block;
+    padding: 16px;
+    text-align: center;
+    border: 2px solid #eee;
+    box-shadow: 0 4px 6px #ddd;
+    margin: auto;
+    box-sizing: border-box;
+    font-size: 12px;
+    border-radius: 15px;
+    color: #ddd;
+    max-width: 600px;
+}

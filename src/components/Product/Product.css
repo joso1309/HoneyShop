@@ -1,5 +1,5 @@
 .Product {
-    display: inline-block;
+    display: block;
     width: 200px;
     padding: 16px;
     text-align: center;
@@ -10,9 +10,22 @@
     cursor: pointer;
     font-size: 12px;
     border-radius: 15px;
+    color: #ddd;
 }
 
 .Product:hover,
-.Product:active {
+.active {
     background-color: rgba(201, 167, 18);
+}
+
+.Med1 {
+    background-image: url('../../assets/images/med.jpg');
+    min-height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+}
+
+.Title {
+    display: inline-block;
 }
