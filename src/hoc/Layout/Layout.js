@@ -11,6 +11,13 @@ export default class Layout extends Component {
     render() {
         return (
             <div>
+                <div className="Navbar">
+                    <div className="Basket">
+                        <div className="BasketImg">
+                            {/* <h2>navbar</h2> */}
+                        </div>
+                    </div>
+                </div>
                 <LandingPage></LandingPage>
 
                 <ProductsSection></ProductsSection>
