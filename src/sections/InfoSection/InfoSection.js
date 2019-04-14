@@ -4,12 +4,16 @@ import './InfoSection.css'
 const InfoSection = () => (
     <section className="Section section-dark">
         <h2>Info</h2>
-        <div className="ProfilePicture">
-            <br></br>
-            <p>Jebač zvan Pero</p>
-            <p>Diplomirao višu uzaludnu</p>
-            <p>U slobodno vrijeme radi kao Profesor</p>
-            <p>Vrsni talent za nogomet</p>
+        <div className="DivImgText">
+            <div className="Picture">
+                <div className="ProfilePicture"></div>
+            </div>
+            <div className="ProfileText">
+                <h4>Jebač zvan Pero</h4>
+                <h4>Diplomirao višu uzaludnu</h4>
+                <h4>U slobodno vrijeme radi kao Profesor</h4>
+                <h4>Vrsni talent za nogomet</h4>
+            </div>
         </div>
 
     </section>

@@ -17,3 +17,12 @@
 ul{
     display: none;
 }
+
+@media(max-width:500px) {
+    .Carousel {
+        margin: auto;
+        max-height: 50vh;
+        min-width: 80vw;
+        margin: auto;
+    }
+}

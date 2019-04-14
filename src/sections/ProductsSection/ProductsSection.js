@@ -68,6 +68,7 @@ class ProductsSection extends Component {
                                     <ProductElement
                                         key={product.productId}
                                         title={product.productTitle}
+                                        price={product.productPrice}
                                         clicked={() => this.handleDescriptionOpen(product.productDescription, product.productTitle)} />
                                 )
                             })}

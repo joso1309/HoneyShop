@@ -1,5 +1,5 @@
 .Section {
-    padding: 10px 30px 50px;
+    padding: 10px 10px 20px;
 }
 
 .section-dark {
@@ -7,17 +7,40 @@
     color: #ddd;
 }
 
-.ProfilePicture {
-    background-position-x: 10%;
-    background-image: url('../../assets/images/pero2.jpg');
-    min-height: 40vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    align-items: center;
+.Picture {
+    display: inline-block;
+    min-width: 300px;
     
 }
 
+.ProfilePicture {
+    background-position-x: 50%;
+    background-image: url('../../assets/images/pero2.jpg');
+    min-height: 30vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    padding-top:20px;
+}
+
 .ProfileText {
-    max-width: 300px;
+    min-width: 200px;
+    display: inline-block;
+    padding-bottom:0px;
+    vertical-align: 30px;
+}
+
+.DivImgText {
+    /* min-width: 60vh; */
     margin: auto;
+    padding: auto;
+}
+
+@media(max-width:500px) {
+    .Picture .ProfileText {
+        display: block;
+        min-width: 300px;
+        margin: auto;
+        
+    }
 }

@@ -7,7 +7,9 @@ export default class GallerySection extends Component {
         return (
             <section className="Section section-light">
                 <h2>Galerija</h2>
-                <Gallery></Gallery>
+                <div>
+                    <Gallery></Gallery>
+                </div>
             </section>
         )
     }

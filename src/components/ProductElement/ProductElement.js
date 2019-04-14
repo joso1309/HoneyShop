@@ -7,7 +7,7 @@ import Wrap from '../../hoc/Wrap/Wrap'
 const ProductElement = (props) => (
     <Wrap>
         <div className="ProductElement">
-            <Product title={props.title} clicked={props.clicked}></Product>
+            <Product title={props.title} clicked={props.clicked} price={props.price}></Product>
             <Button></Button>
         </div>
     </Wrap>
