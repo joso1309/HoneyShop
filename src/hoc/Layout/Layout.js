@@ -11,7 +11,8 @@ import BasketIcon from '../../components/BasketIcon/BasketIcon';
 export default class Layout extends Component {
 
     openBasketHandler() {
-        console.log("otvoreno");
+        console.log('dadada');
+
 
     }
 
