@@ -1,0 +1,25 @@
+.Navbar {
+    max-height: 100px;
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+    z-index: 999;
+    background: transparent;
+    text-align: right;
+    margin-right: 20px; 
+}
+
+.Basket {
+    margin-top: 20px;
+    align-content: right;
+    display: inline-block;
+    min-width: 100px;
+}
+
+.BasketImg {
+    background-image: url('../../assets/images/basket.png');
+    min-height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+}

@@ -6,18 +6,20 @@ import ProductsSection from '../../sections/ProductsSection/ProductsSection';
 import GallerySection from '../../sections/GallerySection/GallerySection';
 import InfoSection from '../../sections/InfoSection/InfoSection';
 import Footer from '../../components/Footer/Footer';
+import BasketIcon from '../../components/BasketIcon/BasketIcon';
 
 export default class Layout extends Component {
+
+    openBasketHandler() {
+        console.log("otvoreno");
+
+    }
+
     render() {
         return (
             <div>
-                <div className="Navbar">
-                    <div className="Basket">
-                        <div className="BasketImg">
-                            {/* <h2>navbar</h2> */}
-                        </div>
-                    </div>
-                </div>
+                <BasketIcon clicked={this.openBasketHandler}></BasketIcon>
+
                 <LandingPage></LandingPage>
 
                 <ProductsSection></ProductsSection>
