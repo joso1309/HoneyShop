@@ -1,0 +1,53 @@
+.InputText {
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.Label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.InputElement {
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: white;
+    font: inherit;
+    padding: 6px 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.InputSelect {
+    display: inline-block;
+    margin: 10px;
+}
+
+.InputElementSelect  {
+    max-width: 150px;
+    min-height: 42px;
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: white;
+    font: inherit;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+option:active, select:hover, input:active, input:hover {
+    background-color: rgba(201, 167, 18);
+  }
+.InputElement:focus {
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .InputText {
+        width: 100%;
+    }
+}

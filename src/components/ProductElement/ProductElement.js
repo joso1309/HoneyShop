@@ -8,7 +8,7 @@ const ProductElement = (props) => (
     <Wrap>
         <div className="ProductElement">
             <Product title={props.title} clicked={props.clicked} price={props.price}></Product>
-            <Button></Button>
+            <Button text='Dodaj u košaricu'></Button>
         </div>
     </Wrap>
 )

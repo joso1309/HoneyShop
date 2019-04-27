@@ -1,0 +1,20 @@
+.DeliveryForm {
+    min-width: 100%;
+    text-align: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #282e34;
+    color: #ddd;
+    padding: 10px 30px 40px;
+}
+
+.Button {
+    margin-top: 40px;
+    display: block;
+}
+
+@media (min-width: 600px) {
+    .DeliveryForm {
+        width: 400px;
+    }
+}

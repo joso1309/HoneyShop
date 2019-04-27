@@ -9,7 +9,7 @@ export default class Basket extends Component {
                 <Link to='/'>Natrag</Link>
                 <div>
                     basket
-</div>
+                </div>
                 <Link to='/podaci'>Nastavi</Link>
             </div>
         )

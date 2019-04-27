@@ -43,6 +43,7 @@ const fromInputs = {
         elementType: 'select',
         elementConfig: {
             options: [
+                { value: '0', displayValue: 'Odaberi dan' },
                 { value: 'subota', displayValue: 'Subota' },
                 { value: 'nedjelja', displayValue: 'Nedjelja' }
             ]
@@ -53,11 +54,12 @@ const fromInputs = {
         elementType: 'select',
         elementConfig: {
             options: [
-                { value: 10, displayValue: 10 },
-                { value: 12, displayValue: 12 },
-                { value: 14, displayValue: 14 },
-                { value: 16, displayValue: 16 },
-                { value: 18, displayValue: 18 }
+                { value: 0, displayValue: 'Od' },
+                { value: 10, displayValue: '10' },
+                { value: 12, displayValue: '12' },
+                { value: 14, displayValue: '14' },
+                { value: 16, displayValue: '16' },
+                { value: 18, displayValue: '18' }
             ]
         },
         value: ''
@@ -66,11 +68,12 @@ const fromInputs = {
         elementType: 'select',
         elementConfig: {
             options: [
-                { value: 10, displayValue: 10 },
+                { value: 0, displayValue: 'Do' },
                 { value: 12, displayValue: 12 },
                 { value: 14, displayValue: 14 },
                 { value: 16, displayValue: 16 },
-                { value: 18, displayValue: 18 }
+                { value: 18, displayValue: 18 },
+                { value: 20, displayValue: 20 }
             ]
         },
         value: ''

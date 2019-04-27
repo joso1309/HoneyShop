@@ -1,9 +1,9 @@
 import React from 'react'
 import './Button.css'
 
-const Button = () => (
+const Button = (props) => (
     <div>
-        <button className="btnDodaj" >Dodaj u košaricu</button>
+        <button className="btnDodaj" >{props.text}</button>
     </div>
 )
 
