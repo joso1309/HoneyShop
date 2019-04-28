@@ -1,0 +1,47 @@
+.BasketListItem {
+   margin: auto;
+}
+
+.BasketListItem table {
+    max-width: 60%;
+    margin:auto;
+    align-items: center;
+    display: block;
+    padding: 16px;
+    text-align: center;
+    border: 2px solid #eee;
+    box-shadow: 0 4px 6px #ddd;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 15px;
+    color: #ddd;
+    outline:none;
+}
+
+.BasketListItem tbody, tr{
+    font: inherit;
+    display: block;
+    min-width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.BasketListItem td {
+    min-width: 33%;
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    
+    .Img {
+        display: none;
+    }
+    .BasketListItem table {
+        min-width: 80%;
+    }
+    .BasketListItem td {
+        min-width: 40%;
+        display: block;
+    }
+}

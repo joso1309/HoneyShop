@@ -6,7 +6,7 @@ const BasketIcon = (props) => {
     return (
         <div className="Navbar">
             <Link to='/kosarica'>
-                <div className="Basket" onClick={props.clicked}>
+                <div className="BasketDiv">
                     <div className="BasketImg"></div>
                 </div>
             </Link>

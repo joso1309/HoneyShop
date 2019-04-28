@@ -10,8 +10,8 @@ import BasketIcon from '../../components/BasketIcon/BasketIcon';
 
 export default class Layout extends Component {
 
-    openBasketHandler() {
-        console.log('dadada');
+    componentWillMount() {
+        console.log(this.props.products);
 
 
     }
@@ -19,21 +19,23 @@ export default class Layout extends Component {
     render() {
         return (
             <div>
-                <BasketIcon clicked={this.openBasketHandler}></BasketIcon>
+                <BasketIcon />
 
-                <LandingPage></LandingPage>
+                <LandingPage />
 
-                <ProductsSection></ProductsSection>
+                <ProductsSection
+                    products={this.props.products}
+                    updateProducts={this.props.updateProducts} />
 
-                <MidImage class="Image2"></MidImage>
+                <MidImage class="Image2" />
 
-                <GallerySection></GallerySection>
+                <GallerySection />
 
-                <MidImage class="Image3"></MidImage>
+                <MidImage class="Image3" />
 
-                <InfoSection></InfoSection>
+                <InfoSection />
 
-                <Footer></Footer>
+                <Footer />
             </div>
         )
     }

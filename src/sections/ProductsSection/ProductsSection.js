@@ -18,14 +18,21 @@ function TabContainer(props) {
 
 let descriptionText = null
 let productTitle = null
-
-const allProducts = getProducts()
+//let updatedProducts = this.props.products
+let allProducts = getProducts()
+// let updatedProducts = null
 
 class ProductsSection extends Component {
     state = {
         tabValue: 0,
         showDescription: false
     };
+
+    componentDidMount() {
+        console.log('mountala se');
+
+    }
+
 
     handleTabChange = (event, tabValue) => {
         this.setState({ tabValue });
@@ -41,7 +48,18 @@ class ProductsSection extends Component {
         this.setState({ showDescription: false });
     };
 
+    addedToBasket(tabId, productId) {
+        console.log('stisnuto');
+        console.log(this.props.products);
+
+        let updatedProducts = this.props.products
+        updatedProducts[tabId].products[productId - 1].addedToBasket = true
+        //allProducts[tabId].products.splice(productId - 1, 1)
+        this.props.updateProducts(updatedProducts)
+    }
+
     render() {
+        console.log('renderila se');
 
         return (
             <section className="ProductSection section-dark">
@@ -69,6 +87,8 @@ class ProductsSection extends Component {
                                         key={product.productId}
                                         title={product.productTitle}
                                         price={product.productPrice}
+                                        inBasket={product.addedToBasket}
+                                        addedToBasket={() => this.addedToBasket(category.tabId, product.productId)}
                                         clicked={() => this.handleDescriptionOpen(product.productDescription, product.productTitle)} />
                                 )
                             })}

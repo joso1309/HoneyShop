@@ -1,0 +1,15 @@
+.Basket {
+    margin: 0%;
+    min-width: 100%;
+    text-align: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #282e34;
+    color: #ddd;
+    padding: 10px 30px 40px;
+}
+
+.Link {
+    margin: 20px;
+    text-decoration: none;
+}
