@@ -10,11 +10,11 @@ const BasketListItem = (props) => {
                 <tbody>
                     <tr>
                         <td className='Img'>
-                            <div className=''></div>
+                            <div className='Img1'></div>
                         </td>
                         <td>
                             <div>{props.productName}</div>
-                            <div><SmallButton text='-' />  {props.amount}  <SmallButton text='+' /></div>
+                            <div><SmallButton text='-' change={props.decrease} />  {props.amount}  <SmallButton text='+' change={props.increase} /></div>
                             <div>{props.amount * props.price} kn</div>
                         </td>
                     </tr>

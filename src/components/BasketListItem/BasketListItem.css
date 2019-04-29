@@ -1,5 +1,6 @@
 .BasketListItem {
    margin: auto;
+   margin-bottom: 20px;
 }
 
 .BasketListItem table {
@@ -32,9 +33,19 @@
     display: inline-block;
 }
 
+.Img1 {
+    background-image: url('../../assets/images/med.jpg');
+    min-height: 110px;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    align-items: center;
+}
+
+
+
 @media (max-width: 600px) {
     
-    .Img {
+    .Img1 {
         display: none;
     }
     .BasketListItem table {
