@@ -8,13 +8,14 @@ import './DeliveryForm.css'
 class DeliveryForm extends Component {
 
     state = {
-        formInputs: getFormInputs()
+        formInputs: getFormInputs(),
+        items: this.props.products
     }
 
     orderHandler = (event) => {
         event.preventDefault();
         console.log(this.state.formInputs);
-
+        console.log(this.state.items);
     }
 
     inputChangedHandler = (event, inputIdentifier) => {

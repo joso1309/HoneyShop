@@ -10,12 +10,6 @@ import BasketIcon from '../../components/BasketIcon/BasketIcon';
 
 export default class Layout extends Component {
 
-    componentWillMount() {
-        console.log(this.props.products);
-
-
-    }
-
     render() {
         return (
             <div>

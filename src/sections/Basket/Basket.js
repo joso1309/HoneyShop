@@ -63,7 +63,7 @@ export default class Basket extends Component {
                     <Link to='/'><SmallButton text='<' /></Link>
                     <br />
                     <Link to='/podaci' className='Link'>
-                        <Button text='Nastavi'></Button>
+                        <Button text='Nastavi' clicked={() => this.props.updateProducts(this.state.items)}></Button>
                     </Link>
                 </div>
             )

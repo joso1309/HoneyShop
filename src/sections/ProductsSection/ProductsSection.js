@@ -18,9 +18,8 @@ function TabContainer(props) {
 
 let descriptionText = null
 let productTitle = null
-//let updatedProducts = this.props.products
+
 let allProducts = getProducts()
-// let updatedProducts = null
 
 class ProductsSection extends Component {
     state = {
@@ -54,7 +53,6 @@ class ProductsSection extends Component {
 
         let updatedProducts = this.props.products
         updatedProducts[tabId].products[productId - 1].addedToBasket = true
-        //allProducts[tabId].products.splice(productId - 1, 1)
         this.props.updateProducts(updatedProducts)
     }
 

@@ -28,10 +28,16 @@ class App extends Component {
             component={(props) => <Basket {...props}
               updateProducts={this.updateProducts}
               products={this.state.productList} />} />
-          <Route path='/podaci' component={DeliveryForm} products={this.state.productList} />
-          <Route path='/' component={(props) => <Layout {...props}
-            updateProducts={this.updateProducts}
-            products={this.state.productList} />} />
+
+          <Route path='/podaci'
+            component={(props) => <DeliveryForm
+              {...props}
+              products={this.state.productList} />} />
+
+          <Route path='/'
+            component={(props) => <Layout {...props}
+              updateProducts={this.updateProducts}
+              products={this.state.productList} />} />
         </Switch>
       </div>
     );
