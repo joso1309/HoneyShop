@@ -21,6 +21,8 @@ class DeliveryForm extends Component {
             items: this.state.items,
             sender: this.state.formInputs
         })
+
+        this.props.history.push(`/`)
     }
 
     inputChangedHandler = (event, inputIdentifier) => {

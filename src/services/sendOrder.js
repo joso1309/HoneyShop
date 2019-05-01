@@ -15,10 +15,10 @@ function sendOrder(data) {
     }
     console.log(finalData);
 
-    axios.get('api/sendemail', finalData)
+    axios.post('api/sendemail', finalData)
         .then(response => {
             console.log(response);
-
+            //data()
         })
 }
 
