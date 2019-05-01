@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import FormInput from '../../components/FormInput/FormInput';
 import getFormInputs from '../../services/getFormInputs';
 import Button from '../../components/Button/Button';
+import sendOrder from '../../services/sendOrder'
 import './DeliveryForm.css'
 
 class DeliveryForm extends Component {
@@ -16,6 +17,10 @@ class DeliveryForm extends Component {
         event.preventDefault();
         console.log(this.state.formInputs);
         console.log(this.state.items);
+        sendOrder({
+            items: this.state.items,
+            sender: this.state.formInputs
+        })
     }
 
     inputChangedHandler = (event, inputIdentifier) => {
